@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Registration Form</title>
+</head>
+<body>
+  <form id="clientRegistrationForm">
+    <!-- Preferred Name -->
+    <label for="preferredName">Preferred Name:</label>
+    <input type="text" id="preferredName" name="preferredName"><br><br>
+
+    <!-- Client Full Names -->
+    <label for="clientFullNames">Client Full Names:</label>
+    <input type="text" id="clientFullNames" name="clientFullNames"><br><br>
+
+    <!-- Surname -->
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname"><br><br>
+
+    <!-- Birth date -->
+    <label for="birthDate">Birth Date:</label>
+    <select id="day" name="day">
+      <option value="">Select Day</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+      <option value="31">31</option>
+    </select>
+    <select id="month" name="month">
+      <option value="">Select Month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+    <select id="year" name="year">
+      <option value="">Select Year</option>
+      <option value="1990">1990</option>
+      <option value="1991">1991</option>
+      <option value="1992">1992</option>
+      <option value="1993">1993</option>
+      <option value="1994">1994</option>
+      <option value="1995">1995</option>
+      <option value="1996">1996</option>
+      <option value="1997">1997</option>
+      <option value="1998">1998</option>
+      <option value="1999">1999</option>
+      <option value="2000">2000</option>
+    </select><br><br>
+
+    <!-- ID Number -->
+    <label for="idNumber">ID Number:</label>
+    <input type="text" id="idNumber" name="idNumber"><br><br>
+	
+	<!-- Home Address -->
+<label for="homeAddress">Home Address:</label>
+<input type="text" id="homeAddress" name="homeAddress" placeholder="Street Name"><br>
+<input type="text" id="homeSuburb" name="homeSuburb" placeholder="Suburb"><br>
+<input type="text" id="homeCity" name="homeCity" placeholder="City/Town"><br>
+<input type="text" id="homeProvince" name="homeProvince" placeholder="Province"><br>
+<input type="text" id="homePostalCode" name="homePostalCode" placeholder="Postal Code"><br><br>
+
+<!-- Postal Address -->
+<label for="postalAddress">Postal Address:</label>
+<input type="checkbox" id="copyHomeAddress" name="copyHomeAddress" onclick="copyHomeAddressToPostalAddress()"> Copy Home Address<br>
+<input type="text" id="postalAddress" name="postalAddress" placeholder="Street Name"><br>
+<input type="text" id="postalSuburb" name="postalSuburb" placeholder="Suburb"><br>
+<input type="text" id="postalCity" name="postalCity" placeholder="City/Town"><br>
+<input type="text" id="postalProvince" name="postalProvince" placeholder="Province"><br>
+<input type="text" id="postalPostalCode" name="postalPostalCode" placeholder="Postal Code"><br><br>
+
+    <!-- Telephone -->
+    <label for="telephone">Telephone:</label>
+    <input type="text" id="telephone" name="telephone"><br><br>
+
+    <!-- Work Cellphone Number -->
+    <label for="workCellphoneNumber">Work Cellphone Number:</label>
+    <input type="text" id="workCellphoneNumber" name="workCellphoneNumber"><br><br>
+	
+<!-- Where did the client hear about the business -->
+    <label for="heardAboutBusiness">Where did you hear about us?</label>
+    <select id="heardAboutBusiness" name="heardAboutBusiness">
+      <option value="">Select an option</option>
+      <option value="wordOfMouth">Word of mouth</option>
+      <option value="internetSearch">Internet search</option>
+      <option value="advertising">Advertising</option>
+    </select><br><br>
+
+    <!-- Credit card details -->
+    <label for="nameOnCard">Name on Card:</label>
+    <input type="text" id="nameOnCard" name="nameOnCard"><br><br>
+    <label for="cardType">Card Type:</label>
+    <select id="cardType" name="cardType">
+      <option value="">Select an option</option>
+      <option value="visa">Visa</option>
+      <option value="mastercard">Mastercard</option>
+    </select><br><br>
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber"><	
+	
+	<!-- Where did the client hear about the business -->
+    <label for="heardAboutBusiness">Where did you hear about us?</label>
+    <select id="heardAboutBusiness" name="heardAboutBusiness">
+      <option value="">Select an option</option>
+      <option value="wordOfMouth">Word of mouth</option>
+      <option value="internetSearch">Internet search</option>
+      <option value="advertising">Advertising</option>
+    </select><br><br>
+
+    <!-- Credit card details -->
+    <label for="nameOnCard">Name on Card:</label>
+    <input type="text" id="nameOnCard" name="nameOnCard"><br><br>
+    <label for="cardType">Card Type:</label>
+    <select id="cardType" name="cardType">
+      <option value="">Select an option</option>
+      <option value="visa">Visa</option>
+      <option value="mastercard">Mastercard</option>
+    </select><br><br>
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber"><
+	
+	<!-- Password and password confirmation -->
+<label for="password">Password:</label>
+<input type="password" id="password" name="password"><br><br>
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+<!-- CVC number -->
+<label for="cvcNumber">CVC Number:</label>
+<input type="text" id="cvcNumber" name="cvcNumber"><br><br>
+
+<!-- Expiration month/year -->
+<label for="expirationMonth">Expiration Month:</label>
+<select id="expirationMonth" name="expirationMonth">
+  <option value="">Select Month</option>
+  <option value="January">January</option>
+  <option value="February">February</option>
+  <option value="March">March</option>
+  <option value="April">April</option>
+  <option value="May">May</option>
+  <option value="June">June</option>
+  <option value="July">July</option>
+  <option value="August">August</option>
+  <option value="September">September</option>
+  <option value="October">October</option>
+  <option value="November">November</option>
+  <option value="December">December</option>
+</select>
+<label for="expirationYear">Expiration Year:</label>
+<select id="expirationYear" name="expirationYear">
+  <option value="">Select Year</option>
+  <option value="2025">2025</option>
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <option value="2029">2029</option>
+  <option value="2030">2030</option>
+</select><br><br>
+
+<input type="submit" value="Submit">
+	

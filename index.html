@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Student: Sphamandla Philani Ndlovu | File: index.html -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shandu Trading Store — Home</title>
+
+  <!-- Favicon on every HTML file -->
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="./StyleSheet/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Shandu Trading Store</h1>
+    <img src="./images/logo.jpg" alt="Shandu Trading Store logo" class="logo round" />
+
+    <!-- Mobile-first navigation -->
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero / Essential mobile content -->
+  <div id="mobile-cta" class="mobile action">
+    <h3>Winter Special — 15% off selected items</h3>
+    <p>Shop local, save more. Limited time only.</p>
+  </div>
+
+  <!-- NEW div element required by A8 (in addition to CTA) -->
+  <div id="about-blurb" class="feature-card">
+    <h3>Why Choose Us?</h3>
+    <p>We’re a privately owned small business in your community offering
+	quality goods at fair prices. We source responsibly and stand behind
+	every product we sell.</p>
+  </div>
+
+  <main>
+    <!-- Figure elements required by A8 -->
+    <figure class="feature-card">
+      <img src="./images/product1.jpg" alt="Featured product 1">
+      <figcaption>Hand-crafted highlight of the month</figcaption>
+    </figure>
+
+    <figure class="feature-card">
+      <img src="./images/product2.jpg" alt="Featured product 2">
+      <figcaption>Locally sourced favorite</figcaption>
+    </figure>
+
+    <!-- Home content aimed at mobile users: quick info & CTA -->
+    <section class="feature-card">
+      <h2>Welcome to Shandu Trading Store</h2>
+      <p>We sell high-quality [type of goods] with friendly service. Browse our range on the Products page, or visit us in-store for personalized help.</p>
+      <ul>
+        <li>Open Mon–Sat</li>
+        <li>Secure payments</li>
+        <li>Local pickup available</li>
+      </ul>
+      <p><a class="external-link" href="https://example-supplier-site.com" target="_blank" rel="noopener">Learn about our suppliers</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <span aria-hidden="true">☎</span>
+      <a class="tel-link" href="tel:+27 736 070 323">+27 736 070 323</a> &nbsp; |
+      <span aria-hidden="true">✉</span>
+      <a href="Gubcad@gmail.com">Gubcad@gmail.com</a>
+      &nbsp; | &copy; <span id="year"></span> Shandu Trading Store
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

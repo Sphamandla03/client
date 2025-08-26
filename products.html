@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Student: Sphamandla Philani Ndlovu | File: products.html -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shandu Trading Store — Products</title>
+
+  <!-- Favicon on every HTML file -->
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="./StyleSheet/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Shandu Trading Store</h1>
+    <img src="./images/logo.jpg" alt="Shandu Trading Store logo" class="logo round" />
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Required new div in products for gradient on tablet -->
+  <div id="promo-banner" class="feature-card">
+    <h3>Bundle & Save</h3>
+    <p>Buy any 3 items and get 10% off at checkout.</p>
+  </div>
+
+  <!-- A8: main must have class="grid" -->
+  <main class="grid">
+    <!-- Three articles with content (mobile-friendly) -->
+    <article>
+      <h3>Product A</h3>
+      <img src="./images/product1.jpg" alt="Product A">
+      <p>High-quality, long-grain rice that is
+	  aromatic and flavor.Pre-washed and pre-cooked
+	  for easy preparation and reduced cooking time</p>
+      <ul>
+        <li>Nutritious and wholesome, with assential 
+		vitamins and minerals</li>
+        <li>available in various packaging options,
+		including resealable bags and single-serve portions</li>
+        <li>Price: R120</li>
+      </ul>
+      <dl>
+        <dt>Benefits</dt><dd>save time: our pre-cooked rice
+		saves you time in kitchen, allowing you to prepare
+		a delicious meal quickly and easy</dd>
+      </dl>
+    </article>
+
+    <article>
+      <h3>Product B</h3>
+      <img src="./images/product2.jpg" alt="Product B">
+      <p>Sunlight washing powder is a popular laundry detergent
+	  known for its effectiveness in cleaning clothes and
+	  leaving a long-lasting fragrance. Here's a brief overview</p>
+      <ul>
+        <li>Origin: Regional</li>
+        <li>Price: R70</li>
+      </ul>
+      <dl>
+        <dt>Key Benefits</dt><dd>
+    - Lifts Dirt Easily: Sunlight washing powder has a unique formula that helps lift dirt and stains from clothes, making it easier to clean them.
+    - Rich Foam: It produces rich foam that helps in removing dirt and stains effectively.
+    - Long-Lasting Fragrance: The fragrance lasts up to 10 days, keeping your clothes smelling fresh for a longer period.
+    - Cares for Clothes: It's designed to care for your clothes, ensuring they stay soft and vibrant wash after wash.
+- Varieties: Sunlight offers different variants, including 2-in-1 and 5-in-1 formulas, catering to various laundry needs.
+- Product Range: Available in different sizes, such as 1kg, 2kg, 3kg, 4kg, and 9kg, making it suitable for both personal and bulk use.
+- User Reviews: Many users praise Sunlight washing powder for its effectiveness, gentle care for clothes, and long-lasting fragrance ².</dd>
+      </dl>
+    </article>
+
+    <article>
+      <h3>Product C</h3>
+      <img src="./images/product3.jpg" alt="Product C">
+      <p>Beans are a type of legume that are widely consumed globally. They're a great source of protein, fiber, and various essential nutrients. Beans come in different varieties, such as kidney beans, black beans, chickpeas, and more. They're versatile and can be used in a range of dishes, from soups and stews to salads and main courses. Beans are known for their potential health benefits, including supporting heart health and providing sustained energy. They're also a good option for vegetarians and vegans due to their high protein content.</p>
+      <ul>
+        <li>Origin: SA Farmer</li>
+        <li>Price: R90</li>
+      </ul>
+      <dl>
+        <dt>Key Benefits</dt><dd>
+
+- High in Protein: Excellent source of plant-based protein.
+- Rich in Fiber: Supports digestive health and satiety.
+- Good for Heart Health: Helps lower cholesterol and blood pressure.
+- Packed with Nutrients: Rich in vitamins, minerals, and antioxidants.
+- Supports Healthy Weight: Fills you up and provides sustained energy.
+- May Help Manage Blood Sugar: Supports stable blood sugar levels.
+Overall, beans are a nutritious and versatile food that can be a great addition to a healthy diet!</dd>
+      </dl>
+    </article>
+
+    <!-- A8: Aside below the articles with extra info; spans 3 columns on desktop -->
+    <aside class="span-3">
+      <h3>More Information</h3>
+      <p>All prices include VAT. Stock is limited and may vary by season.</p>
+      <p>See our <a class="external-link" target="_blank" rel="noopener" href="https://example-related-site.com">related partner site</a> for product tips.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>
+      <span aria-hidden="true">☎</span>
+      <a class="tel-link" href="tel:+27 736 070 323">+27 736 070 323</a> &nbsp; |
+      <span aria-hidden="true">✉</span>
+      <a href="Gubcad@gmail.com">Gubcad@gmail.com</a>
+      &nbsp; | &copy; <span id="year"></span> Shandu Trading Store
+    </p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

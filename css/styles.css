@@ -1,0 +1,318 @@
+/* Student: YOUR NAME | File: StyleSheet/styles.css | Date: 2025-08-25 */
+
+/* =========================
+   CSS RESET (update to include figure & figcaption per A8)
+   ========================= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html, body, h1, h2, h3, h4, h5, h6, p,
+ul, ol, li, dl, dt, dd, figure, figcaption,
+section, article, aside, main, header, nav, footer {
+  margin: 0; padding: 0;
+}
+/* Force all images to be small thumbnails */
+img {
+  width: 120px;      /* fixed small width */
+  height: 90px;      /* fixed small height */
+  object-fit: cover; /* crops nicely without stretching */
+  display: block;
+  margin: 0 auto;    /* centers images */
+  border-radius: 8px; /* optional rounded corners */
+}
+
+/* =========================
+   BASE / MOBILE-FIRST
+   ========================= */
+:root{
+  --bg: #ffffff;
+  --ink: #222;
+  --muted: #666;
+  --brand: #155e75;
+  --brand-2: #0ea5e9;
+  --card: #f6f9fc;
+  --accent: #f59e0b;
+  --border: #e5e7eb;
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.site-header{
+  position: sticky; /* A5 + A8 (removed on tablet later) */
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: .75rem 1rem;
+}
+
+.brand{ font-size: 1.5rem; letter-spacing: .5px; }
+.logo{ width: 120px; margin-top: .5rem; }
+.round{ border-radius: 12px; }
+
+/* NAV — mobile viewport rules (A8: edit nav, nav ul, nav li) */
+nav{ margin-top: .5rem; background: #fff; }
+.nav-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.nav-list li{
+  border-top: 1px solid var(--border);
+}
+.nav-list li:first-child{ border-top: 0; }
+.nav-list a{
+  display: block;
+  padding: .75rem 1rem;
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* Utility classes required by A8 */
+.mobile{ display: block; }            /* visible by default */
+.tablet-desktop{ display: none; }     /* hidden on mobile; shown later */
+
+/* Main / cards */
+main{ padding: 1rem; }
+.feature-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* A8: text-shadow on h3 inside the mobile div */
+#mobile-cta h3{
+  text-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+/* Links used earlier (A5) */
+.external-link{ text-decoration: underline; }
+.action{
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+/* Footer */
+footer{
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background: #f8fafc;
+  border-top: 1px solid var(--border);
+}
+.tel-link{ white-space: nowrap; }
+
+/* CONTACT */
+.hours{ margin: .5rem 0 0 1.25rem; }
+.contact-form{
+  display: grid;
+  gap: .75rem;
+}
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: .6rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* MAP (mobile default) */
+.map iframe{
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* PRODUCTS — mobile requirements (A8)
+   - padding on articles
+   - center h3
+   - center images
+   - background on 2nd article only
+   - left margin on article UL
+   - increase h3 size within articles
+   - aside styling
+*/
+main.grid{
+  display: grid;          /* becomes multi-column at desktop */
+  grid-template-columns: 1fr; /* mobile single column */
+  gap: 1rem;
+  padding: 1rem;
+}
+article{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;                /* padding required */
+}
+article h3{
+  text-align: center;           /* center h3 required */
+  font-size: 1.25rem;           /* increase size required */
+  margin-bottom: .5rem;
+}
+article img{
+  display: block;               /* center image required */
+  margin: .25rem auto .75rem;
+  border-radius: 12px;
+}
+main.grid article:nth-of-type(2){
+  background: #faf5ff;          /* background only on 2nd article */
+}
+article ul{
+  margin-left: 1.25rem;         /* left margin required */
+}
+aside{
+  background: #fff;
+  border: 2px dashed var(--brand-2);
+  border-radius: 16px;
+  padding: 1rem;
+}
+.span-3{ grid-column: 1 / -1; } /* span three columns (will take effect when columns >1) */
+
+/* A8: new selector for main ul → margin bottom & left */
+main ul{
+  margin: 0 0 1rem 1.25rem;
+}
+
+/* =========================
+   TABLET MEDIA QUERY
+   (A8 says: create media query and do several tasks)
+   ========================= */
+@media screen and (min-width: 600px){
+  /* Show/hide content for tablet viewport (A8) */
+  .mobile{ display: none; }
+  .tablet-desktop{ display: block; }
+
+  /* Remove sticky header on tablet (A8) */
+  .site-header{ position: static; }
+
+  /* Nav list items displayed in a single horizontal line with borders between (A8) */
+  .nav-list{
+    flex-direction: row;
+    align-items: center;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .nav-list li{
+    border-top: 0;
+    border-left: 1px solid var(--border); /* border between links */
+  }
+  .nav-list li:first-child{ border-left: 0; }
+
+  /* Use CSS Grid to create multiple columns (A8) */
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1rem;
+  }
+
+  /* Products main remains grid; 2 columns on tablet */
+  main.grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Map uses default height & width on tablet (A8) */
+  .map iframe{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 260px;
+  }
+
+  /* Add linear gradient to the special products div (A8) */
+  #promo-banner{
+    background: linear-gradient(120deg, rgba(14,165,233,.12), rgba(21,94,117,.12));
+  }
+}
+
+/* =========================
+   DESKTOP MEDIA QUERY
+   (A8 tasks: header style, nav unified to right with even links, main multi-columns,
+   headings in main, hover state, etc.)
+   Determine desktop width used: 900px
+   ========================= */
+@media screen and (min-width: 900px){
+  /* Header layout */
+  .site-header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .brand{ font-size: 2rem; }
+  .logo{ width: 140px; margin: 0; }
+
+  /* Navigation as a unified element to the right, links evenly distributed */
+  nav{
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .25rem;
+  }
+  .nav-list{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+  .nav-list a{
+    padding: .6rem 1rem;
+  }
+  .nav-list a:hover{        /* Hover pseudo-class for desktop (A8) */
+    background: #e2e8f0;
+  }
+
+  /* Main multi-column layout */
+  main{
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* Style headings within main (A8) */
+  main h2, main h3{
+    letter-spacing: .3px;
+  }
+
+  /* Products grid → 3 columns on desktop */
+  main.grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .span-3{ grid-column: 1 / -1; } /* aside spans all 3 columns */
+
+  /* Style new classes on home page (A8) */
+  #about-blurb.feature-card{ border-color: #dbeafe; }
+}
+
+/* =========================
+   LARGE DESKTOP MEDIA QUERY
+   ========================= */
+@media screen and (min-width: 1200px){
+  main{ max-width: 1280px; }
+  .brand{ font-size: 2.25rem; }
+  article h3{ font-size: 1.35rem; }
+}
+
+/* =========================
+   PRINT MEDIA QUERY (A8)
+   ========================= */
+@media print{
+  .site-header, nav, footer { display: none; }
+  body{ color: #000; }
+  a{ color: #000; text-decoration: none; }
+  main{ padding: 0; }
+}
